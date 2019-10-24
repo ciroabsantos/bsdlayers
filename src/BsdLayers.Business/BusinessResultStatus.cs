@@ -1,4 +1,4 @@
-﻿namespace BsdLayers.Business.Commands
+﻿namespace BsdLayers.Business
 {
     /// <summary>
     /// Possible result status for business operations

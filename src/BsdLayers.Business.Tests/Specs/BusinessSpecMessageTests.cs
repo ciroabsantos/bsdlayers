@@ -1,5 +1,4 @@
-﻿using BsdLayers.Business.Commands;
-using BsdLayers.Business.Specs;
+﻿using BsdLayers.Business.Specs;
 using KellermanSoftware.CompareNetObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -45,8 +44,8 @@ namespace BsdLayers.Business.Tests.Specs
 
             //assert:
             var comparison = new CompareLogic();
+            Assert.IsFalse(specMessage == cloned);
             Assert.IsTrue(comparison.Compare(specMessage, cloned).AreEqual);
-
         }
     }
 }
