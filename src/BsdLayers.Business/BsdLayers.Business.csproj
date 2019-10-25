@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackageProjectUrl>https://github.com/ciroabsantos/bsdlayers/tree/feature/business-practices-project/src/BsdLayers.Business</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ciroabsantos/bsdlayers</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
