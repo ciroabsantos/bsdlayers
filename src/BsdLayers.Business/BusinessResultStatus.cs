@@ -7,6 +7,7 @@
     {
         Success = 200,
         Created = 201,
+        Accepted = 202,
 
         InvalidInputs = 400,
         Unauthorized = 401,

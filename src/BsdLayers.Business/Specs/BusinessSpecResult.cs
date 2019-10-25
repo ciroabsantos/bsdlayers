@@ -63,8 +63,8 @@ namespace BsdLayers.Business.Specs
             }
 
             Status = Messages
-                .Where(m => m.Status != BusinessResultStatus.Success)
-                .OrderBy(m => (int)m.Status)
+                .Where(m => m.Status >= BusinessResultStatus.InvalidInputs)
+                .OrderBy(m => m.Status)
                 .Select(m => m.Status)
                 .First();
         }
