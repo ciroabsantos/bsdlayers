@@ -50,12 +50,74 @@ namespace BsdLayers.Services.Model
         /// Object's deep clone
         /// </summary>
         /// <returns></returns>
-        public object Clone()
+        public virtual object Clone()
         {
             return new ServiceResponse
             (
                 statusCode: StatusCode,
                 messages: new List<string>(Messages)
+            );
+        }
+    }
+
+    /// <summary>
+    /// Default response message with specific content 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class ServiceResponse<T> : ServiceResponse
+    {
+        /// <summary>
+        /// Service response specific content
+        /// </summary>
+        public T Content { get; set; }
+
+        /// <summary>
+        /// Full constructor
+        /// </summary>
+        /// <param name="statusCode"></param>
+        /// <param name="messages"></param>
+        /// <param name="content"></param>
+        public ServiceResponse(int statusCode, IEnumerable<string> messages, T content)
+            :
+            base(statusCode: statusCode, messages: messages)
+        {
+            Content = content;
+        }
+
+        /// <summary>
+        /// Constructor with single message
+        /// </summary>
+        /// <param name="statusCode"></param>
+        /// <param name="message"></param>
+        /// <param name="content"></param>
+        public ServiceResponse(int statusCode, string message, T content)
+            :
+            this(statusCode: statusCode, messages: new string[] { message }, content: content)
+        {
+        }
+
+        /// <summary>
+        /// Constructor with empty message
+        /// </summary>
+        /// <param name="statusCode"></param>
+        /// <param name="content"></param>
+        public ServiceResponse(int statusCode, T content)
+            :
+            this(statusCode: statusCode, messages: new string[0], content: content)
+        {
+        }
+
+        /// <summary>
+        /// Object's deep clone
+        /// </summary>
+        /// <returns></returns>
+        public override object Clone()
+        {
+            return new ServiceResponse<T>
+            (
+                statusCode: StatusCode,
+                messages: new List<string>(Messages),
+                content: Content is ICloneable ? (T)((ICloneable)Content)?.Clone() : Content
             );
         }
     }
