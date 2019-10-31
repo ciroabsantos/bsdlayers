@@ -5,8 +5,8 @@ The objective of this project is to create reusable objects, contributing to sta
 
 making easier the maintenance, and faster the development of new features. 
 
-####Business Layer:
-######In this layer is implemented objects that contains domain business rules 
+#### Business Layer:
+###### In this layer is implemented objects that contains domain business rules 
 
 - Model:  Here are defined the domain model:  
 	- Entities,  Value-Objects, ...
@@ -14,15 +14,15 @@ making easier the maintenance, and faster the development of new features.
 	- Commands: Here are created objects to encapsulate business operations.  
 
 		- Create Entity Xpto 
-		- Resolve Report Data, ….
+		- Resolve Report Data, â€¦.
 
 - Specs: Here are created objects that validate the state of model objects for specific situations: 
 
 	- Spec to verify if Xpto is valid to be persisted, 
-	- Spec to verify if Report eligible to be published, … 
+	- Spec to verify if Report eligible to be published, â€¦ 
 
-####Service Layer: 
-######Here are created objects that implements application workflows 
+#### Service Layer: 
+###### Here are created objects that implements application workflows 
 
 - Services: Implementation of applications workflows 
 
