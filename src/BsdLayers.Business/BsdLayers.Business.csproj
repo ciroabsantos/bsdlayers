@@ -5,6 +5,9 @@
     <PackageProjectUrl>https://github.com/ciroabsantos/bsdlayers/tree/feature/business-practices-project/src/BsdLayers.Business</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ciroabsantos/bsdlayers</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Description>Project with command and specs interfaces and other business related common objects</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
 </Project>
